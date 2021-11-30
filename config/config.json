@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x6b7A1d6094e2D2472168A7903f0aE3681CFdB973",
+  "SCAN_LINK": "https://snowtrace.io/address/0x6b7A1d6094e2D2472168A7903f0aE3681CFdB973",
+  "NETWORK": {
+    "NAME": "Avalanche",
+    "SYMBOL": "AVAX",
+    "ID": 1
+  },
+  "NFT_NAME": "AVAX Navies",
+  "SYMBOL": "AN",
+  "MAX_SUPPLY": 5000,
+  "WEI_COST": 500000000000000000,
+  "DISPLAY_COST": 0.5,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "NFTrade",
+  "MARKETPLACE_LINK": "https://nftrade.com/assets/avalanche/0x6b7a1d6094e2d2472168a7903f0ae3681cfdb973",
+  "SHOW_BACKGROUND": true
+}
