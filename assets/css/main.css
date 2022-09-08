@@ -3290,3 +3290,38 @@ input, select, textarea {
 			}
 
 	}
+
+/* Grid Codes */
+
+.grid {
+	position: relative;
+	top: 0;
+	left: 0;
+	}
+
+	.grid:hover .overlay {
+	opacity: 0.5;
+	}
+
+/* Isometric System Top down model */
+
+  .b1 {
+	position: absolute;
+	top: 236px;
+	left: 110px;
+  }
+  .b2 {
+	position: absolute;
+	top: 90px;
+	left: 1057px;
+  }
+  .b3 {
+	position: absolute;
+	top: 400px;
+	left: 681px;
+  }
+  .b4 {
+	position: absolute;
+	top: 46px;
+	left: 570px;
+  }
