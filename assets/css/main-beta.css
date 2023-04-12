@@ -349,6 +349,11 @@ input, select, textarea {
 			width: 50%;
 		}
 
+		.row > .col-6-center {
+			width: 50%;
+			text-align: center
+		}
+
 		.row > .off-6 {
 			margin-left: 50%;
 		}
