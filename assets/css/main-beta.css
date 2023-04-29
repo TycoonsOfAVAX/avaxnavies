@@ -1875,6 +1875,15 @@ input, select, textarea {
 			font-size: 1.65em;
 		}
 
+		input[type="button"].wide,
+		input[type="submit"].wide,
+		input[type="reset"].wide,
+		button.wide,
+		.button.wide {
+			font-size: 1.65em;
+			width: 100%;
+		}
+
 /* List */
 
 	ul {
