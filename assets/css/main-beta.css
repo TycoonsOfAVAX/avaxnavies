@@ -2029,6 +2029,74 @@ input, select, textarea {
 	transition: 0.4s;
   }
   
+
+
+/* Progress Bar */
+.progress-container {
+	background-color: rgb(144, 182, 141);
+	width: 80%;
+	border-radius: 15px;
+	margin: 10px 10%;
+	border: 5px white solid;
+}
+
+.mission {
+	background-color: rgb(192, 72, 72);
+	color: white;
+	padding: 1%;
+	text-align: right;
+	font-size: 20px;
+	border-radius: 15px;
+}
+
+.m1 {
+	width: 100%;
+}
+
+.m2 {
+	width: 0%;
+}
+
+.m3 {
+	width: 0%;
+}
+
+.m4 {
+	width: 0%;
+}
+
+.m5 {
+	width: 0%;
+}
+
+.m6 {
+	width: 0%;
+}
+
+.m7 {
+	width: 0%;
+}
+
+.m8 {
+	width: 0%;
+}
+
+.m9 {
+	width: 0%;
+}
+
+.m10 {
+	width: 0%;
+}
+
+.m11 {
+	width: 0%;
+}
+
+.m12 {
+	width: 0%;
+}
+
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
 	background-color: #969696;
