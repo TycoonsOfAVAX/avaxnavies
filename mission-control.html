@@ -85,6 +85,15 @@
 										</div>
 										<div class="col-6 col-12-medium imp-medium">
 											<img src="images/mission-control-image.png" alt="" style="width:400px;height:400px;"/>
+											<div>
+												<h3>Check Wallet Balance</h3>
+												<label for="walletAddress">Wallet Address:</label>
+												<input type="text" id="walletAddress" placeholder="Enter your wallet address">
+												<button id="checkBalanceBtn">Check Balance</button>
+											<br><i id="token1Balance"></i>
+											<br><i id="token2Balance">Please input your wallet address</i>
+											<br><i id="token3Balance"></i>
+											</div>
 										</div>
 									</div>
 																		
@@ -92,8 +101,8 @@
 										<!--==========================
 											MONTHLY EDIT THIS
 										==============================-->
-									<h2>Active Missions</h2>
 									<div class="col-9 col-12-medium container">					
+										<h2>Active Missions</h2>
 										<button class="accordion">Mission 2 - Operation "Bad Hangover"</button>
 										<div class="panel">
 											<div class="row gtr-150">
@@ -119,6 +128,7 @@
 															<b class="button alt">LOCKED<br></b>
 														</div>
 													</div>
+													<br><i id="tokenM2Balance"></i>
 												</div>
 												<div class="col-8">
 													<br>
@@ -132,10 +142,13 @@
 														<b>Reward (Fail):</b> None <br>
 														<br>
 														<b><u>Fleet Strength:</u></b>
+														<br><b>FIATland Occupation Fleet:</b> <i>1500.00 $SHIPs</i>
+														<br><b>AVAX Resistance Fleet:</b> <i id="tokenM2ShipCount">Loading...</i>												
+														<br><br><b><u>Mission Outcome</b></u>
 														<div class="progress-container">
 															<div class="mission m2">Mission_In_Progress</div>
 														</div>
-														<center>TBD - Lots of drunkards</center>
+														<center>Outcome to be revealed on July 1, 2023</center>
 
 													</p>
 												</div>
@@ -287,6 +300,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/tokensearch.js"></script>
 	</body>
 </html>

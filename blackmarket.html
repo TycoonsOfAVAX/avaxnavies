@@ -73,16 +73,29 @@
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<p>Trade in your mission tokens for resource points tokens ($RP) at the blackmarket. The black market merchant <b>ONLY accepts the mission token from the previous month's winning team</b>. Players have until the last day of each month to make their exchange. Once a new month kicks in, there's no guarantee they'll be accepted. Exchange rates varies month to month and the merchant only sells whole units of $RP.</p>
+							<div>
+								<h3>Check Wallet Balance</h3>
+								<label for="walletAddress">Wallet Address:</label>
+								<input type="text" id="walletAddress" placeholder="Enter your wallet address">
+								<button id="checkBalanceBtn">Check Balance</button>
+							</div>
+							<div>
+							<br><b>Your Balances</b>
+							<br><i id="token2Balance">Please input your wallet address</i>
+							<br><i id="token3Balance"></i>
+							<br><i id="token4Balance"></i>
+						</div>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
 							<img src="images/blackmarket-image.png" alt="" style="width:400px;height:400px;"/>
 						</div>
 					</div>
+					<br><br>
 					<div class="col-12">
-						<h1 class=""major"><span>Currently Accepting Mission Tokens:</span></h1>
+						<h2 class=""major"><span>Currently Accepting Mission Tokens:</span></h2>
 						<br>
 						<br>
-						<h2>$M1 for $RP 1 to 1</h2>
+						<h3>$M1 for $RP 1 to 1</h3>
 						<b><a href="https://ipfs-2.thirdwebcdn.com/ipfs/QmRSigvYNceevzrYV3rcmVw1rpWMY28zdmGzf9hp67vx72/erc20.html?contract=0xDC9bF9d44236460fd989178e8bD2C0a4f3f33646&chain=%7B%22name%22%3A%22Avalanche+C-Chain%22%2C%22chain%22%3A%22AVAX%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Favalanche.rpc.thirdweb.com%2F5a9bc94b87f7cbbbfbbc234bf1e07f0adf5f3cf3012c9f26f9fc9820d64df93a%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Avalanche%22%2C%22symbol%22%3A%22AVAX%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22avax%22%2C%22chainId%22%3A43114%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22avalanche%22%7D&primaryColor=purple"><button>Claim Rewards</button></a><br></b>			
 						<br>
 						Be sure to check your balance for $M1 tokens (Token address 0xF2aC4ad5b0559082748e367639fF51116a28BbF8) on Metamask/Snowtrace to know how much to claim. <br>
@@ -334,6 +347,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/tokensearch.js"></script>
 
 	</body>
 </html>
