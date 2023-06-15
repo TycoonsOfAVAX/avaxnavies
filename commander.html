@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AVAX Navies : Resistance DAO | NFT based combat simulation on the AVAX Avalanche Network</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main-beta.css" />
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9WER1D7DS"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-L9WER1D7DS');
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KQBSTEYYJ"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-0KQBSTEYYJ');
+		</script>
+
+		<style>
+			#message {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+			}
+			#commander_content {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+			}
+		</style>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->	
+			<header id="header">
+				<div class="logo container">
+						<h1><a href="#" id="logo">Commander's Console</a></h1>
+				</div>
+			</header>
+	
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current3">
+							<a href="gameplay-base.html">Play</a>
+							<ul>
+								<li><a href="gameplay-base.html#an-intro">Get Started</a></li>
+								<li><a href="rally-point.html">Collect Ships (rally Point)</a></li>
+								<li><a href="mission-control.html">Mission Control (Join Missions)</a></li>
+								<li><a href="blackmarket.html">Blackmarket</a></li>
+								<li><a href="hq-facilities.html">HQ Facilities</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="https://app.nftrade.com/assets/avalanche/0xf21a42e203db80593478f2e7ed8f97a8db9b3391">Islands Marketplace</a>
+						</li>
+						<li>
+							<a href="mint.html">Shipyard Mint</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/islandsofavax">Twitter</a>
+						</li>
+					</ul>
+				</nav>
+
+			<!-- Mission -->
+			<section id="an-mission">
+				<div class="container"><center>
+
+					<h1>Password Verification (It's "AVAX")</h1>
+					<label for="password">Enter Password:</label>
+					<input type="password" id="password">
+					<button id="submitButton">Submit</button>
+					<h2 id="message"></h2>
+					<div id="commander_content">
+						<h2>Resistance Size</h2>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+								Islands Committed
+								<h2 id="islandStaked">Loading</h2>
+							</div>
+							<div class="col-4 col-12-medium">
+								Naval Bases Committed
+								<h2 id="navybaseStaked">Loading</h2>
+							</div>
+							<div class="col-4 col-12-medium">
+								Seasteads Committed
+								<h2 id="seasteadStaked">Loading</h2>
+							</div>
+						</div>
+						<br><br>
+						<h3>Monthly Outputs:</h3>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+								Island Outputs
+								<h2 id="islandOutput">Loading</h2>
+								$SHIPs
+							</div>
+							<div class="col-4 col-12-medium">
+								Naval Base Outputs
+								<h2 id="navybaseOutput">Loading</h2>
+								$SHIPs
+							</div>
+							<div class="col-4 col-12-medium">
+								Seastead Outputs
+								<h2 id="seasteadOutput">Loading</h2>
+								$SHIPs
+							</div>
+						</div>
+						<br>
+						<div class="container">
+							Resistance Monthly Total Output
+							<h2 id="totalOutput">Loading</h2>
+							$SHIPs
+						</div>
+						<br><br>
+
+						<h2>AVAXpelago Info</h2>
+						<h3>Resistance Community Assets</h3>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+								Resistance Fleet
+								<h2>1000</h2>
+								$SHIPs<br>
+							</div>
+							<div class="col-4 col-12-medium">
+								Resistance Treasury
+								<h2>TBD</h2>
+								$RP<br>
+							</div>
+							<div class="col-4 col-12-medium">
+								Resistance HP
+								<h2 id="resistanceHP">Loading</h2>
+							</div>
+						</div>
+						<br><br>
+						<h3>Prices</h3>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+								Seasteads
+								<h2>20</h2>
+								$RP
+							</div>
+							<div class="col-4 col-12-medium">
+								Envoy
+								<h2>TBD</h2>
+								$RP-AVAX JLP
+							</div>
+							<div class="col-4 col-12-medium">
+								Civics
+								<h2>TBD</h2>
+								$RP-AVAX JLP
+							</div>
+						</div>
+
+
+
+
+						<!--<h2>Mission Summary</h2>
+						<h3>Mission 1</h3>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+								Ships Committed
+								<h2 id="islandOutput">Loading</h2>
+								$SHIPs
+							</div>
+							<div class="col-4 col-12-medium">
+								$M1 claimed
+								<h2 id="navybaseOutput">Loading</h2>
+								$M1
+							</div>
+							<div class="col-4 col-12-medium">
+								<h2 id="seasteadOutput">Loading</h2>
+								$SHIPs
+							</div>
+						</div>-->
+					</div>
+				</div></center>
+			</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<!-- Copyright -->
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; AVAX Navies. All rights reserved</li>
+									<li>Disclaimer: The Islands of AVAX and AVAX Navies is a collection NFT artwork depicting unique islands and a group naval combat experience and NOT a security or investment vehicle. The economic simulator is a social experiment and is subject to changes and revisions. Participants should be getting the NFTs for the art and NOT with an expectation on making a return of any form.</li>
+								</ul>
+							</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/commander.js"></script>
+	</body>
+</html>

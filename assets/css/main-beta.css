@@ -3413,3 +3413,17 @@ input, select, textarea {
 	top: 256px;
 	left: 600px;
   }
+  
+  .fade-out {
+	animation: fadeOut 1s;
+  }
+  
+  @keyframes fadeOut {
+	0% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+  }
+  
