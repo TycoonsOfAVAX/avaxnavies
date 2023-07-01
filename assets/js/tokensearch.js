@@ -1,8 +1,9 @@
 // Load Token Search
 window.addEventListener('DOMContentLoaded', () => {
   const tokenM2ShipCountElement = document.getElementById('tokenM2ShipCount');
+  const tokenM3ShipCountElement = document.getElementById('tokenM3ShipCount');
 
-  // Fetch token count
+  // Fetch M2 token count
   fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x24B74a5632C22377A196ceF3Ff62252411865B19&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
@@ -13,6 +14,18 @@ window.addEventListener('DOMContentLoaded', () => {
       console.error('Error:', error);
       tokenM2ShipCountElement.textContent = 'Error occurred while fetching M2 Ship count.';
     });
+
+  // Fetch M3 token count
+  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x22b2ada02756599EEBEEC06a6d810A3c4ba92bA5&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+  .then(response => response.json())
+  .then(data => {
+    const tokenM2ShipCount = data.result  / 10 ** 18;
+    tokenM3ShipCountElement.textContent = `${tokenM3ShipCount.toFixed(2)} $SHIPs`;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    tokenM3ShipCountElement.textContent = 'Error occurred while fetching M3 Ship count.';
+  });
 });
 
 // Token Search Upon Wallet input: Get the elements for wallet address, check balance button, and token balance display
@@ -25,6 +38,8 @@ const token3BalanceElement = document.getElementById('token3Balance');
 const token4BalanceElement = document.getElementById('token4Balance');
 const tokenM2BalanceElement = document.getElementById('tokenM2Balance');
 const tokenM2ShipPercentElement = document.getElementById('tokenM2ShipPercent');
+const tokenM3BalanceElement = document.getElementById('tokenM3Balance');
+const tokenM3ShipPercentElement = document.getElementById('tokenM3ShipPercent');
 
 // Event listener for the check balance button
 checkBalanceBtn.addEventListener('click', () => {
@@ -97,6 +112,18 @@ checkBalanceBtn.addEventListener('click', () => {
     .catch(error => {
       console.error('Error:', error);
       tokenM2BalanceElement.textContent = 'Failed to fetch $M2 balance';
+    });
+    
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x24B74a5632C22377A196ceF3Ff62252411865B19&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    .then(response => response.json())
+    .then(data => {
+      const tokenM3Balance = data.result / 10 ** 18;
+      tokenM3BalanceElement.textContent = `Your $M3 Count: ${tokenM3Balance.toFixed(2)}`;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      tokenM3BalanceElement.textContent = 'Failed to fetch $M3 balance';
     });    
+    
 });
 //0x000000000000000000000000000000000000dead
