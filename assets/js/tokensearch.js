@@ -92,15 +92,15 @@ checkBalanceBtn.addEventListener('click', () => {
     });
 
   // Make API requests to get the account balances for the tokens in Tab 2
-  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xF2aC4ad5b0559082748e367639fF51116a28BbF8&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x24B74a5632C22377A196ceF3Ff62252411865B19&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
       const token4Balance = Number(data.result) / 10 ** 18;
-      token4BalanceElement.textContent = `$M1 Balance: ${token4Balance.toFixed(2)}`;
+      token4BalanceElement.textContent = `$M2 Balance: ${token4Balance.toFixed(2)}`;
     })
     .catch(error => {
       console.error('Error:', error);
-      token4BalanceElement.textContent = 'Failed to fetch $M1 balance';
+      token4BalanceElement.textContent = 'Failed to fetch $M2 balance';
     });
 
   fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x24B74a5632C22377A196ceF3Ff62252411865B19&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
