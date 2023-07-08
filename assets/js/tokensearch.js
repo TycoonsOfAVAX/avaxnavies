@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x22b2ada02756599EEBEEC06a6d810A3c4ba92bA5&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
   .then(response => response.json())
   .then(data => {
-    const tokenM2ShipCount = data.result  / 10 ** 18;
+    const tokenM3ShipCount = data.result  / 10 ** 18;
     tokenM3ShipCountElement.textContent = `${tokenM3ShipCount.toFixed(2)} $SHIPs`;
   })
   .catch(error => {
@@ -114,7 +114,7 @@ checkBalanceBtn.addEventListener('click', () => {
       tokenM2BalanceElement.textContent = 'Failed to fetch $M2 balance';
     });
     
-    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x24B74a5632C22377A196ceF3Ff62252411865B19&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x22b2ada02756599EEBEEC06a6d810A3c4ba92bA5&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
       const tokenM3Balance = data.result / 10 ** 18;
