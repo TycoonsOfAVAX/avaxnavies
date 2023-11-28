@@ -51,8 +51,7 @@ const token3BalanceElement = document.getElementById('token3Balance');
 const token6BalanceElement = document.getElementById('token6Balance');
 const tokenM2BalanceElement = document.getElementById('tokenM2Balance');
 const tokenM2ShipPercentElement = document.getElementById('tokenM2ShipPercent');
-const tokenM3BalanceElement = document.getElementById('tokenM3Balance');
-const tokenM3ShipPercentElement = document.getElementById('tokenM3ShipPercent');
+const tokenM5ABalanceElement = document.getElementById('tokenM5ABalance');
 const tokenM6balanceElement = document.getElementById('tokenM6balance');
 
 // Event listener for the check balance button
@@ -130,16 +129,16 @@ checkBalanceBtn.addEventListener('click', () => {
       tokenM2BalanceElement.textContent = 'Failed to fetch $M2 balance';
     });
     
-    // Provide M3 balance in your wallet
-    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x22b2ada02756599EEBEEC06a6d810A3c4ba92bA5&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    // Provide $M5A balance in your wallet
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x69606B126cc876Ab7222D9347f5381095190Cc10&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
-      const tokenM3Balance = data.result / 10 ** 18;
-      tokenM3BalanceElement.textContent = `Your $M3 Count: ${tokenM3Balance.toFixed(2)}`;
+      const tokenM5ABalance = data.result / 10 ** 18;
+      tokenM5ABalanceElement.textContent = `Your $M5A Count: ${tokenM5ABalance.toFixed(2)}`;
     })
     .catch(error => {
       console.error('Error:', error);
-      tokenM3BalanceElement.textContent = 'Failed to fetch $M3 balance';
+      tokenM5ABalanceElement.textContent = 'Failed to fetch $M5A balance';
     });    
     
     // Provide $M6 balance in your wallet
