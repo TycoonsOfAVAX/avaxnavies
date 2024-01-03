@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
     // Fetch M6 token count in Mission wallet
-    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0xAbcE686571FAe20a18d9E62C548be611F81D1D11&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x3eF1086D34a6134Cf114B9Af4A635Cb79F6deb63&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
       const tokenM6ShipCount = data.result  / 10 ** 18;
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => {
       console.error('Error:', error);
-      tokenM6ShipCountElement.textContent = 'Error occurred while fetching M6 Ship count.';
+      tokenM6ShipCountElement.textContent = 'Error occurred while fetching M7 Ship count.';
     });
 });
 
@@ -51,7 +51,7 @@ const token3BalanceElement = document.getElementById('token3Balance');
 const token6BalanceElement = document.getElementById('token6Balance');
 const tokenM2BalanceElement = document.getElementById('tokenM2Balance');
 const tokenM2ShipPercentElement = document.getElementById('tokenM2ShipPercent');
-const tokenM5ABalanceElement = document.getElementById('tokenM5ABalance');
+const tokenLastMBalanceElement = document.getElementById('tokenLastMBalance');
 const tokenM6balanceElement = document.getElementById('tokenM6balance');
 
 // Event listener for the check balance button
@@ -106,15 +106,15 @@ checkBalanceBtn.addEventListener('click', () => {
 
   // Make API requests to get the account balances for the tokens in Tab 2
   // Provide M6 balance in your wallet
-  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xAbcE686571FAe20a18d9E62C548be611F81D1D11&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x3eF1086D34a6134Cf114B9Af4A635Cb79F6deb63&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
       const token6Balance = Number(data.result) / 10 ** 18;
-      token6BalanceElement.textContent = `$M6 Balance: ${token6Balance.toFixed(2)}`;
+      token6BalanceElement.textContent = `$M7 Balance: ${token6Balance.toFixed(2)}`;
     })
     .catch(error => {
       console.error('Error:', error);
-      token6BalanceElement.textContent = 'Failed to fetch $M6 balance';
+      token6BalanceElement.textContent = 'Failed to fetch $M7 balance';
     });
 
     // Provide M2 balance in your wallet 
@@ -129,28 +129,28 @@ checkBalanceBtn.addEventListener('click', () => {
       tokenM2BalanceElement.textContent = 'Failed to fetch $M2 balance';
     });
     
-    // Provide $M5A balance in your wallet
-    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x69606B126cc876Ab7222D9347f5381095190Cc10&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
-    .then(response => response.json())
-    .then(data => {
-      const tokenM5ABalance = data.result / 10 ** 18;
-      tokenM5ABalanceElement.textContent = `Your $M5A Count: ${tokenM5ABalance.toFixed(2)}`;
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      tokenM5ABalanceElement.textContent = 'Failed to fetch $M5A balance';
-    });    
-    
-    // Provide $M6 balance in your wallet
+    // Provide Last month Mission balance in your wallet
     fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xAbcE686571FAe20a18d9E62C548be611F81D1D11&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
-      const tokenM6balance = data.result / 10 ** 18;
-      tokenM6balanceElement.textContent = `Your $M6 Count: ${tokenM6balance.toFixed(2)}`;
+      const tokenLastMBalance = data.result / 10 ** 18;
+      tokenLastMBalanceElement.textContent = `Your $M6 Count: ${tokenLastMBalance.toFixed(2)}`;
     })
     .catch(error => {
       console.error('Error:', error);
-      tokenM6balanceElement.textContent = 'Failed to fetch $M6 balance';
+      tokenLastMBalanceElement.textContent = 'Failed to fetch $M6 balance';
+    });    
+    
+    // Provide This Month Mission balance in your wallet
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0x3eF1086D34a6134Cf114B9Af4A635Cb79F6deb63&address=${walletAddress}&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    .then(response => response.json())
+    .then(data => {
+      const tokenM6balance = data.result / 10 ** 18;
+      tokenM6balanceElement.textContent = `Your $M7 Count: ${tokenM6balance.toFixed(2)}`;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      tokenM6balanceElement.textContent = 'Failed to fetch $M7 balance';
     });  
 
 });
