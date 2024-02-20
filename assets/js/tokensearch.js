@@ -1,43 +1,44 @@
-// Load Token Search
+// THIS SECTION SEARCHES FOR AND DISPLAYS SHIPS COMMITTED FOR EACH MISSION ON MISSION CONTROL PAGE 
+// Load Token Search 
 window.addEventListener('DOMContentLoaded', () => {
-  const tokenM5AShipCountElement = document.getElementById('tokenM5AShipCount');
-  const tokenM5BShipCountElement = document.getElementById('tokenM5BShipCount');
-  const tokenM6ShipCountElement = document.getElementById('tokenM6ShipCount');
+  const tokenMAShipCountElement = document.getElementById('tokenMAShipCount');
+  const tokenMBShipCountElement = document.getElementById('tokenMBShipCount');
+  const tokenMCShipCountElement = document.getElementById('tokenMCShipCount');
 
-  // Fetch M5a token count in mission wallet
-  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x69606B126cc876Ab7222D9347f5381095190Cc10&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+  // Fetch MA token count in mission wallet
+  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x9d836227d209280D5Defa3341Ad595AB9eA010d4&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
-      const tokenM5AShipCount = data.result  / 10 ** 18;
-      tokenM5AShipCountElement.textContent = `${tokenM5AShipCount.toFixed(2)} $SHIPs`;
+      const tokenMAShipCount = data.result  / 10 ** 18;
+      tokenMAShipCountElement.textContent = `${tokenMAShipCount.toFixed(2)} $SHIPs`;
     })
     .catch(error => {
       console.error('Error:', error);
-      tokenM5AShipCountElement.textContent = 'Error occurred while fetching M5A Ship count.';
+      tokenMAShipCountElement.textContent = 'Error occurred while fetching A team mission Ship count.';
     });
 
   // Fetch M5B token count in Mission wallet
-  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x9d049d71b7c5d1FBF237cF6dbd9E922FF04B257A&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+  fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x6e0B00443D8160DEb02ccDdACDc66194da7B3444&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
   .then(response => response.json())
   .then(data => {
-    const tokenM5BShipCount = data.result  / 10 ** 18;
-    tokenM5BShipCountElement.textContent = `${tokenM5BShipCount.toFixed(2)} $SHIPs`;
+    const tokenMBShipCount = data.result  / 10 ** 18;
+    tokenMBShipCountElement.textContent = `${tokenMBShipCount.toFixed(2)} $SHIPs`;
   })
   .catch(error => {
     console.error('Error:', error);
-    tokenM5BShipCountElement.textContent = 'Error occurred while fetching M5B Ship count.';
+    tokenMBShipCountElement.textContent = 'Error occurred while fetching B team mission Ship count.';
   });
 
     // Fetch M6 token count in Mission wallet
-    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x3eF1086D34a6134Cf114B9Af4A635Cb79F6deb63&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
+    fetch(`https://api.snowtrace.io/api?module=account&action=tokenbalance&contractaddress=0xbC877a247f7386b6F2EE9c7a476dfbA43b265e80&address=0x5E131330d743575E26114897C3C06e38A41052EC&apikey=V23H5AIX434U8RKM41WDQ8YHQGD2WRUWS9`)
     .then(response => response.json())
     .then(data => {
-      const tokenM6ShipCount = data.result  / 10 ** 18;
-      tokenM6ShipCountElement.textContent = `${tokenM6ShipCount.toFixed(2)} $SHIPs`;
+      const tokenMCShipCount = data.result  / 10 ** 18;
+      tokenMCShipCountElement.textContent = `${tokenMCShipCount.toFixed(2)} $SHIPs`;
     })
     .catch(error => {
       console.error('Error:', error);
-      tokenM6ShipCountElement.textContent = 'Error occurred while fetching M7 Ship count.';
+      tokenMCShipCountElement.textContent = 'Error occurred while fetching C team mission Ship count.';
     });
 });
 
